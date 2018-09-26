@@ -35,7 +35,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-file:///Users/thomas/Desktop/flixMovieApp_Demo.gif
+![flixmovieapp_demo](https://user-images.githubusercontent.com/43357563/46050959-85918c00-c0fc-11e8-8bad-d5fd548ac3bf.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
