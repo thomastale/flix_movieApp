@@ -94,7 +94,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-https://user-images.githubusercontent.com/43357563/46623823-86f78700-caf4-11e8-95e3-7b44eb20e0e6.gif
+![flixmovieapp2_demo](https://user-images.githubusercontent.com/43357563/46623912-d0e06d00-caf4-11e8-887e-8ebea62fe82c.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
