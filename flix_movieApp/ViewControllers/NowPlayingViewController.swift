@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -39,10 +39,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @objc func didPullToRefresh(_ refreshControl:UIRefreshControl){
-          fetchMovies()
-        }
-        
-        func fetchMovies() {
+        fetchMovies()
+    }
+    
+    func fetchMovies() {
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -66,8 +66,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         task.resume()
-        }
-
+    }
+    
     //number of cell rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
@@ -95,6 +95,15 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let movie = movies[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        }
+    }
+    
     //height for row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 175
@@ -105,7 +114,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    
+    
 }
 
